@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/weightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/weight_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weightValueText" />
+
+    <TextView
+        android:id="@+id/weightValueText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/default_weight_label"
+        app:layout_constraintBottom_toBottomOf="@+id/setWeightBtn"
+        app:layout_constraintEnd_toStartOf="@+id/setWeightBtn"
+        app:layout_constraintStart_toEndOf="@+id/weightLabel"
+        app:layout_constraintTop_toTopOf="@+id/setWeightBtn" />
+
+    <Button
+        android:id="@+id/setWeightBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/set_weight_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numDrinksLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/num_drinks_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toStartOf="@+id/space"
+        app:layout_constraintTop_toBottomOf="@+id/setWeightBtn" />
+
+    <TextView
+        android:id="@+id/drinksValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/default_num_drinks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/numDrinksLabel"
+        app:layout_constraintStart_toEndOf="@+id/space"
+        app:layout_constraintTop_toTopOf="@+id/numDrinksLabel" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/numDrinksLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/numDrinksLabel"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <TextView
+        android:id="@+id/bacLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/bac_level_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="@+id/numDrinksLabel"
+        app:layout_constraintTop_toBottomOf="@+id/numDrinksLabel" />
+
+    <TextView
+        android:id="@+id/bacLevelValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/default_bac_level"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/bacLevelLabel"
+        app:layout_constraintStart_toEndOf="@+id/bacLevelLabel"
+        app:layout_constraintTop_toTopOf="@+id/bacLevelLabel" />
+
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="@string/status_label"
+        app:layout_constraintBottom_toBottomOf="@+id/bacStatusText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bacStatusText" />
+
+    <Button
+        android:id="@+id/viewDrinksBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/view_drinks"
+        app:layout_constraintEnd_toEndOf="@+id/bacStatusText"
+        app:layout_constraintStart_toStartOf="@+id/statusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabel" />
+
+    <Button
+        android:id="@+id/addDrinkBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/add_drinks"
+        app:layout_constraintEnd_toEndOf="@+id/viewDrinksBtn"
+        app:layout_constraintStart_toStartOf="@+id/viewDrinksBtn"
+        app:layout_constraintTop_toBottomOf="@+id/viewDrinksBtn" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/reset_label"
+        app:layout_constraintEnd_toEndOf="@+id/addDrinkBtn"
+        app:layout_constraintStart_toStartOf="@+id/addDrinkBtn"
+        app:layout_constraintTop_toBottomOf="@+id/addDrinkBtn" />
+
+    <TextView
+        android:id="@+id/bacStatusText"
+        android:layout_width="148dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/safe_color"
+        android:gravity="center"
+        android:text="@string/safe_label"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/statusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/bacLevelValueText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

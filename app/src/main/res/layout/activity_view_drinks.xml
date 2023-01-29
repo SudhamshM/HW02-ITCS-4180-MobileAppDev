@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ViewDrinksActivity">
+
+    <TextView
+        android:id="@+id/viewDrinksDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/viewDrinksDrinkLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toStartOf="@+id/viewDrinkNum"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewDrinkOutOf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/view_drink_out_of"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/viewDrinkNum"
+        app:layout_constraintEnd_toStartOf="@+id/viewDrinkListSize"
+        app:layout_constraintTop_toTopOf="@+id/viewDrinkNum"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/viewDrinkNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/default_num_drinks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toStartOf="@+id/viewDrinkOutOf"
+        app:layout_constraintTop_toTopOf="@+id/viewDrinksDrink" />
+
+    <TextView
+        android:id="@+id/viewDrinkListSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="74dp"
+        android:text="@string/default_num_drinks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/viewDrinkOutOf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewDrinkNum"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/viewDrinkOz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/oz12_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDrinkOutOf" />
+
+    <TextView
+        android:id="@+id/viewDrinkAddedDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/view_drink_added"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDrinkAlcPercent" />
+
+    <ImageView
+        android:id="@+id/drinkDeleteDrashImage"
+        android:layout_width="72dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/delete_desciption"
+        app:layout_constraintEnd_toStartOf="@+id/drinkRightImage"
+        app:layout_constraintStart_toEndOf="@+id/drinkLeftImage"
+        app:layout_constraintTop_toBottomOf="@+id/viewDrinkAddedDate"
+        app:srcCompat="@drawable/ic_trash"
+        tools:contentDescription="@string/delete_desciption" />
+
+    <ImageView
+        android:id="@+id/drinkLeftImage"
+        android:layout_width="72dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/drinkRightImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_previous" />
+
+    <ImageView
+        android:id="@+id/drinkRightImage"
+        android:layout_width="72dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/drinkDeleteDrashImage"
+        app:srcCompat="@drawable/ic_next" />
+
+    <TextView
+        android:id="@+id/viewDrinkAlcPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/alc_pct_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDrinkOz" />
+
+    <Button
+        android:id="@+id/buttonViewClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/view_drink_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drinkDeleteDrashImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
