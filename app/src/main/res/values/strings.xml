@@ -3,7 +3,7 @@
     <string name="bac_screen_title">BAC Calculator</string>
     <string name="set_weight_screen_title">Set Weight/Gender</string>
     <string name="add_drinks_screen_title">Add Drink/Gender</string>
-    <string name="view_drinks_screen">View Drinks/Gender</string>
+    <string name="view_drinks_screen">View Drinks</string>
     <string name="weight_label">Weight: </string>
     <string name="default_weight_label">N/A</string>
     <string name="set_weight_label">Set</string>

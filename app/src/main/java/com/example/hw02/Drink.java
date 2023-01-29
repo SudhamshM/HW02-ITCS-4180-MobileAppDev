@@ -1,10 +1,13 @@
 package com.example.hw02;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Drink implements Serializable {
     double drinkSizeOz, alcoholPercent, valueA;
     Profile personWhoDrank;
+
+    Date drankDate;
 
     public Drink(double drinkSizeOz, double alcoholPercent, Profile personWhoDrank)
     {
@@ -12,6 +15,7 @@ public class Drink implements Serializable {
         this.alcoholPercent = alcoholPercent;
         this.valueA = (drinkSizeOz * (alcoholPercent/100));
         this.personWhoDrank = personWhoDrank;
+        this.drankDate = new Date();
     }
 
     public Drink(double drinkSizeOz, double alcoholPercent)
@@ -19,6 +23,7 @@ public class Drink implements Serializable {
         this.drinkSizeOz = drinkSizeOz;
         this.alcoholPercent = alcoholPercent;
         this.valueA = (drinkSizeOz * (alcoholPercent/100));
+        this.drankDate = new Date();
     }
 
     public double getDrinkSizeOz()
@@ -77,6 +82,7 @@ public class Drink implements Serializable {
                 "drinkSizeOz=" + drinkSizeOz +
                 ", alcoholPercent=" + alcoholPercent +
                 ", valueA=" + valueA +
+                ", drankDate=" + drankDate +
                 '}';
     }
 }

@@ -32,6 +32,11 @@ public class SetWeightActivity extends AppCompatActivity {
                 }
                 String userGender = binder.genderRadioGroup.getCheckedRadioButtonId() == R.id.femaleRadio ? "Female" : "Male";
                 double userWeight = Double.parseDouble(binder.editWeightLbs.getText().toString());
+                if (userWeight == 0)
+                {
+                    Toast.makeText(SetWeightActivity.this, "Please enter a non-zero weight.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 double valueR = userGender.equals("Male") ? 0.73 : 0.66;
 
                 Profile userProfile = new Profile(userGender, userWeight, valueR);

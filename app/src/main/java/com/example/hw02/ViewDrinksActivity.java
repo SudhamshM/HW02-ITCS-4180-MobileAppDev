@@ -102,10 +102,12 @@ public class ViewDrinksActivity extends AppCompatActivity {
 
     public void updateDrinkData(int indexNum, ArrayList<Drink> listDrinks)
     {
-        binder.viewDrinkOz.setText(listDrinks.get(indexNum).drinkSizeOz + " oz");
+        Drink currentDrink = listDrinks.get(indexNum);
+        binder.viewDrinkOz.setText(currentDrink.drinkSizeOz + " oz");
         binder.viewDrinkListSize.setText(String.valueOf(listDrinks.size()));
-        binder.viewDrinkAlcPercent.setText(listDrinks.get(indexNum).getAlcoholPercent() + "% Alcohol");
+        binder.viewDrinkAlcPercent.setText(currentDrink.getAlcoholPercent() + "% Alcohol");
         binder.viewDrinkNum.setText(String.valueOf(indexNum + 1));
+        binder.viewDrinkAddedDate.setText(getString(R.string.view_drink_added) + " " + currentDrink.drankDate.toString());
         currentIndex = indexNum;
     }
 }
